@@ -2,6 +2,7 @@ package com.data.excel;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Header;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -34,40 +35,19 @@ public class ExcelReader {
 				
 				for(int j = 0; j < lastColumn; j++) {
 					Cell cell = row.getCell(j);
-					CellType type = cell.getCellType();
 					
-					switch (type) {
-					case STRING:
-						cell.getStringCellValue();
-						break;
-
-					case NUMERIC:
-						break;
-					case BLANK:
-						break;
-					case BOOLEAN:
-						break;
-					case FORMULA:
-						break;
-					case _NONE:
-						break;
-					case ERROR:
-						break;
-						
-					default:
-						break;
-					}
-
+					DataFormatter formater = new DataFormatter();
+					String value;
 					
-					
+					value = formater.formatCellValue(cell);
+					object.put(headers[j], value);
 					
 				}
-				System.out.println(object.toString(1));
 				
 			}
-			
+			array.put(object);
 		}
-		return null;
+		return array.toString(1);
 		
 	}
 	
@@ -87,9 +67,6 @@ public class ExcelReader {
 		}else {
 			return null;
 		}
-		
-		
-		
 		
 	}
 	
