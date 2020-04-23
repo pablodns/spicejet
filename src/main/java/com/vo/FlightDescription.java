@@ -1,86 +1,96 @@
 package com.vo;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 //@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class FlightDescription {
 	
-	private String test;
-	private String adults;
-	private String from;
-	private String to;
-	private String departure;
-	private String arrival;
-	private String children;
+	private String TEST;
+	private String ADULTS;
+	private String FROM;
+	private String TO;
+	private String DEPARTURE_DATE;
+	private String ARRIVAL_DATE;
+	private String CHILDREN;
 	
 	
 	public FlightDescription() {
 		
 	}
 	
-	public FlightDescription(String tEST, String aDULTS, String fROM, String tO, String dEPARTURE_DATE,
-			String aRIVAL_DATE, String cHILDREN) {
+	public FlightDescription(String tEST, String aDULTS, String fROM, String tO, String D,
+			String A, String cHILDREN) {
 		super();
-		test = tEST;
-		adults = aDULTS;
-		from = fROM;
-		to = tO;
-		departure = dEPARTURE_DATE;
-		arrival = aRIVAL_DATE;
-		children = cHILDREN;
+		TEST = tEST;
+		ADULTS = aDULTS;
+		FROM = fROM;
+		TO = tO;
+		DEPARTURE_DATE = D;
+		ARRIVAL_DATE = A;
+		CHILDREN = cHILDREN;
 	}
 	
 	
 	
 	public String getTEST() {
-		return test;
+		return TEST;
 	}
+	
+	@JsonProperty("test")
 	public void setTEST(String tEST) {
-		test = tEST;
+		TEST = tEST;
 	}
 	public String getADULTS() {
-		return adults;
+		return ADULTS;
 	}
+	@JsonProperty("adults")
 	public void setADULTS(String aDULTS) {
-		adults = aDULTS;
+		ADULTS = aDULTS;
 	}
 	public String getFROM() {
-		return from;
+		return FROM;
 	}
+	@JsonProperty("from")
 	public void setFROM(String fROM) {
-		from = fROM;
+		FROM = fROM;
 	}
 	public String getTO() {
-		return to;
+		return TO;
 	}
+	@JsonProperty("to")
 	public void setTO(String tO) {
-		to = tO;
+		TO = tO;
 	}
 	public String getDEPARTURE_DATE() {
-		return departure;
+		return DEPARTURE_DATE;
 	}
-	public void setDEPARTURE_DATE(String dEPARTURE_DATE) {
-		departure = dEPARTURE_DATE;
+	@JsonProperty("departure")
+	public void setDEPARTURE_DATE(String D) {
+		DEPARTURE_DATE = D;
 	}
-	public String getARIVAL_DATE() {
-		return arrival;
+	public String getARRIVAL_DATE() {
+		return ARRIVAL_DATE;
 	}
-	public void setARIVAL_DATE(String aRIVAL_DATE) {
-		arrival = aRIVAL_DATE;
+	@JsonProperty("arrival")
+	public void setARRIVAL_DATE(String A) {
+		ARRIVAL_DATE = A;
 	}
 	public String getCHILDREN() {
-		return children;
+		return CHILDREN;
 	}
+	@JsonProperty("children")
 	public void setCHILDREN(String cHILDREN) {
-		children = cHILDREN;
+		CHILDREN = cHILDREN;
 	}
 
 	
 	@Override
 	public String toString() {
-		return "FlightDescription [TEST=" + test + ", ADULTS=" + adults + ", FROM=" + from + ", TO=" + to
-				+ ", DEPARTURE_DATE=" + departure + ", ARIVAL_DATE=" + arrival + ", CHILDREN=" + children
+		return "FlightDescription [TEST=" + TEST + ", ADULTS=" + ADULTS + ", FROM=" + FROM + ", TO=" + TO
+				+ ", DEPARTURE_DATE=" + DEPARTURE_DATE + ", ARRIVAL_DATE=" + ARRIVAL_DATE + ", CHILDREN=" + CHILDREN
 				+ "]";
 	}
 	

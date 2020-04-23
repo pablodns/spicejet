@@ -15,9 +15,7 @@ public class ExcelReader {
 	static Workbook wBook = null;
 	static int lastRow;
 	static int lastColumn;
-	
-	
-	
+		
 	public static String getDataInJsonFormat(Sheet sheet) {
 		
 		JSONArray array = new JSONArray();
