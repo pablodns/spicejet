@@ -1,10 +1,7 @@
 package com.vo;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-//@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class FlightDescription {
 	
@@ -15,8 +12,7 @@ public class FlightDescription {
 	private String DEPARTURE_DATE;
 	private String ARRIVAL_DATE;
 	private String CHILDREN;
-	
-	
+
 	public FlightDescription() {
 		
 	}
