@@ -31,9 +31,11 @@ public class BaseTest {
 	
 	public WebDriver driver;
 	public HashMap<String, FlightDescription> testData = FlightDescriptionSingleton.getFlightDescriptionSingleton();
-	
+	public FlightDescription data;
 	
 	public BaseTest() {
+		
+		data = testData.get(this.getClass().getSimpleName());
 		
 		switch (getDefaultBrowser()) {
 		case "Chrome":

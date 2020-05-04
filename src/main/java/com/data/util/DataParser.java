@@ -28,4 +28,21 @@ public class DataParser {
 		
 	}
 	
+	
+	public static <T> String parseObject(Object [] list) {
+		ObjectMapper mapper = new ObjectMapper();
+		
+		try {
+			return mapper.writeValueAsString(list);
+		} catch (Exception e) {
+			return null;
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
 }

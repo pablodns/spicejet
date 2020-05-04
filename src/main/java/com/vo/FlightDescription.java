@@ -12,6 +12,8 @@ public class FlightDescription {
 	private String DEPARTURE_DATE;
 	private String ARRIVAL_DATE;
 	private String CHILDREN;
+	private String INFANT;
+	private String TYPE;
 
 	public FlightDescription() {
 		
@@ -82,13 +84,29 @@ public class FlightDescription {
 		CHILDREN = cHILDREN;
 	}
 
-	
+	public String getINFANT() {
+		return INFANT;
+	}
+	@JsonProperty("infant")
+	public void setINFANT(String iNFANT) {
+		INFANT = iNFANT;
+	}
+
+	public String getTYPE() {
+		return TYPE;
+	}
+	@JsonProperty("type")
+	public void setTYPE(String tYPE) {
+		TYPE = tYPE;
+	}
+
 	@Override
 	public String toString() {
 		return "FlightDescription [TEST=" + TEST + ", ADULTS=" + ADULTS + ", FROM=" + FROM + ", TO=" + TO
 				+ ", DEPARTURE_DATE=" + DEPARTURE_DATE + ", ARRIVAL_DATE=" + ARRIVAL_DATE + ", CHILDREN=" + CHILDREN
-				+ "]";
+				+ ", INFANT=" + INFANT + ", TYPE=" + TYPE + "]";
 	}
+
 	
 
 }

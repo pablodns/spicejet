@@ -3,13 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.regression.Flight_Second_Test">
-        <methods>
-          <include name="AfterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="g"/>
-        </methods>
-      </class> <!-- com.regression.Flight_Second_Test -->
       <class name="com.regression.Flight_Test_Singleton">
         <methods>
           <include name="AfterMethod"/>

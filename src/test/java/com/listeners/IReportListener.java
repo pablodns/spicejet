@@ -8,6 +8,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.data.ReportSingleton;
+import com.data.util.DataParser;
 import com.vo.Report;
 
 public class IReportListener implements ITestListener{
@@ -17,41 +18,40 @@ public class IReportListener implements ITestListener{
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		className = getSimpleClassName(result);
-		dataReport.put(className, new Report(className,"",""));
+		//className = getSimpleClassName(result);
+		//dataReport.put(className, new Report(className,"",""));
 		
 		ITestListener.super.onTestStart(result);
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		dataReport.get(className).setStatus("PASSED");
-		
+		setResult(result);
 		ITestListener.super.onTestSuccess(result);
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		dataReport.get(className).setStatus("FAILED");
-		dataReport.get(className).setFailedDescription(result.getThrowable().getMessage());
+		setResult(result);
 		ITestListener.super.onTestFailure(result);
 
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		dataReport.get(className).setStatus("SKIPPED");
-		dataReport.get(className).setFailedDescription(result.getThrowable().getMessage());
+		setResult(result);
 		ITestListener.super.onTestSkipped(result);
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		setResult(result);
 		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
 	@Override
 	public void onTestFailedWithTimeout(ITestResult result) {
+		setResult(result);
 		ITestListener.super.onTestFailedWithTimeout(result);
 	}
 
@@ -70,7 +70,54 @@ public class IReportListener implements ITestListener{
 			System.out.println(values[i].toString());
 		}
 		
+		System.out.println(DataParser.parseObject(values));
+		
+		
+		
 	}
+	
+	
+	public void setResult(ITestResult result) {
+		
+		String name = getSimpleClassName(result);
+		System.out.println("****************" + name);
+		dataReport.put(name, new Report(name, "", ""));
+		
+		String defect = ""; 
+		int run_status_id = result.getStatus();
+		
+		switch (run_status_id) {
+		case ITestResult.SUCCESS:
+			dataReport.get(name).setStatus("PASSED");
+			
+			break;
+		case ITestResult.FAILURE:
+			dataReport.get(name).setStatus("FAILED");
+			dataReport.get(name).setFailedDescription(result.getThrowable().getMessage());
+			
+			break;
+			
+		case ITestResult.SKIP:
+			dataReport.get(name).setStatus("SKIPED");
+			dataReport.get(name).setFailedDescription(result.getThrowable().getMessage());
+			break;
+		default:
+			break;
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	public String getSimpleClassName(ITestResult result) {

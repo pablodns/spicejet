@@ -11,7 +11,7 @@ import org.testng.asserts.SoftAssert;
 import com.pages.MainPage;
 import com.util.BaseTest;
 
-public class Test_1 extends BaseTest {
+public class Test_2 extends BaseTest {
 	
 	@Test
 	public void f() {
