@@ -4,7 +4,6 @@
 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.regression.Test_1"/>
       <class name="com.regression.Test_2"/>
       <class name="com.regression.Flight_Test_Singleton"/>
     </classes>

@@ -1,5 +1,7 @@
 package com.listeners;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -8,6 +10,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.data.ReportSingleton;
+import com.data.excel.ExcelWriter;
 import com.data.util.DataParser;
 import com.vo.Report;
 
@@ -64,15 +67,17 @@ public class IReportListener implements ITestListener{
 	public void onFinish(ITestContext context) {
 		ITestListener.super.onFinish(context);
 		
-		Object [] values = 	dataReport.values().toArray();
+		/*Object [] values = 	dataReport.values().toArray();
 		
 		for (int i = 0; i < values.length; i++) {
 			System.out.println(values[i].toString());
-		}
+		}*/
 		
-		System.out.println(DataParser.parseObject(values));
+		ExcelWriter report = new ExcelWriter();
+
+		List <Report> dataList = new ArrayList(dataReport.values());
 		
-		
+		report.writeWorkBook(dataList);		
 		
 	}
 	

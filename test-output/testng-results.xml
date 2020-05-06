@@ -1,45 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="3" passed="2">
+<testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="51137" started-at="2020-05-04T16:52:59 CDT" finished-at="2020-05-04T16:53:50 CDT">
+  <suite name="Suite" duration-ms="15532" started-at="2020-05-06T17:20:11 CDT" finished-at="2020-05-06T17:20:27 CDT">
     <groups>
     </groups>
-    <test name="Test" duration-ms="51137" started-at="2020-05-04T16:52:59 CDT" finished-at="2020-05-04T16:53:50 CDT">
+    <test name="Test" duration-ms="15532" started-at="2020-05-06T17:20:11 CDT" finished-at="2020-05-06T17:20:27 CDT">
       <class name="com.regression.Test_2">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Test_2@7997b197]" name="beforeMethod" is-config="true" duration-ms="349" started-at="2020-05-04T16:53:27 CDT" finished-at="2020-05-04T16:53:27 CDT">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Test_2@6273c5a4]" name="beforeMethod" is-config="true" duration-ms="505" started-at="2020-05-06T17:20:11 CDT" finished-at="2020-05-06T17:20:12 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.regression.Test_2@7997b197]" name="f" duration-ms="17738" started-at="2020-05-04T16:53:27 CDT" finished-at="2020-05-04T16:53:45 CDT">
+        <test-method status="PASS" signature="f()[pri:0, instance:com.regression.Test_2@6273c5a4]" name="f" duration-ms="12005" started-at="2020-05-06T17:20:12 CDT" finished-at="2020-05-06T17:20:24 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Test_2@7997b197]" name="AfterMethod" is-config="true" duration-ms="2442" started-at="2020-05-04T16:53:45 CDT" finished-at="2020-05-04T16:53:48 CDT">
+        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Test_2@6273c5a4]" name="AfterMethod" is-config="true" duration-ms="2940" started-at="2020-05-06T17:20:24 CDT" finished-at="2020-05-06T17:20:27 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
       </class> <!-- com.regression.Test_2 -->
-      <class name="com.regression.Test_1">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Test_1@21c64522]" name="beforeMethod" is-config="true" duration-ms="328" started-at="2020-05-04T16:52:59 CDT" finished-at="2020-05-04T16:52:59 CDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.regression.Test_1@21c64522]" name="f" duration-ms="24689" started-at="2020-05-04T16:52:59 CDT" finished-at="2020-05-04T16:53:24 CDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Test_1@21c64522]" name="AfterMethod" is-config="true" duration-ms="3040" started-at="2020-05-04T16:53:24 CDT" finished-at="2020-05-04T16:53:27 CDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-      </class> <!-- com.regression.Test_1 -->
       <class name="com.regression.Flight_Test_Singleton">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Flight_Test_Singleton@11dee337]" name="beforeMethod" is-config="true" duration-ms="348" started-at="2020-05-04T16:53:48 CDT" finished-at="2020-05-04T16:53:48 CDT">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Flight_Test_Singleton@5d465e4b]" name="beforeMethod" is-config="true" duration-ms="370" started-at="2020-05-06T17:20:11 CDT" finished-at="2020-05-06T17:20:12 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="h()[pri:0, instance:com.regression.Flight_Test_Singleton@11dee337]" name="h" duration-ms="2" started-at="2020-05-04T16:53:48 CDT" finished-at="2020-05-04T16:53:48 CDT">
+        <test-method status="SKIP" signature="h()[pri:0, instance:com.regression.Flight_Test_Singleton@5d465e4b]" name="h" duration-ms="23" started-at="2020-05-06T17:20:12 CDT" finished-at="2020-05-06T17:20:12 CDT">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[This is the exception]]>
@@ -59,29 +45,16 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- h -->
-        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Flight_Test_Singleton@11dee337]" name="AfterMethod" is-config="true" duration-ms="1779" started-at="2020-05-04T16:53:48 CDT" finished-at="2020-05-04T16:53:50 CDT">
+        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Flight_Test_Singleton@5d465e4b]" name="AfterMethod" is-config="true" duration-ms="1912" started-at="2020-05-06T17:20:12 CDT" finished-at="2020-05-06T17:20:14 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
