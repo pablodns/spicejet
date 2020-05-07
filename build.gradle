@@ -37,7 +37,10 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
 	implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
 	// https://mvnrepository.com/artifact/org.testng/testng
-	implementation 'org.testng:testng:7.1.0'
+	implementation 'org.testng:testng:7.1.0'// https://mvnrepository.com/artifact/org.json/json
+	//implementation 'org.json:json:20190722'
+	implementation 'org.apache.clerezza.ext:org.json.simple:0.4'
+	
 }
 
 
