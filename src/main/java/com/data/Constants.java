@@ -9,6 +9,11 @@ public class Constants {
 	public static final Constants FIREFOX_PATH = new Constants("FIREFOX_PATH");
 	public static final Constants REPORT_PATH = new Constants("REPORT_PATH");
 	public static final Constants REPORT_NAME = new Constants("REPORT_NAME");
+	public static final Constants SERVER = new Constants("SERVER");
+	public static final Constants BROWSER_VERSION = new Constants("BROWSER_VERSION");
+	public static final Constants OS = new Constants("OS");
+	public static final Constants OS_VERSION = new Constants("OS_VERSION");
+	public static final Constants RESOLUTION = new Constants("RESOLUTION");
 	
 	private String name;
 	

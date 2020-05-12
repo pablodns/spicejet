@@ -1,67 +1,85 @@
 package com.vo;
 
 import com.data.excel.IExcelWriter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(value = {"headers", "values", "title"})
 public class Report implements IExcelWriter {
 	
-	private String testName;
-	private String status;
-	private String failedDescription;
-	private String testId; 
-	private String statusId; 
-	private String comment; 
+	private String title;
+	private int test_id;
+	private int status_id;
+	private String comment;
+	private String defects;
 	
 	public Report() {
 		super();
 	}
-
-	public Report(String testName, String status, String failedDescription) {
-		super();
-		this.testName = testName;
-		this.status = status;
-		this.failedDescription = failedDescription;
-	}
 	
-	public String getTestName() {
-		return testName;
-	}
-	public void setTestName(String testName) {
-		this.testName = testName;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
+	public Report(String title, int test_id) {
+		this.title = title; 
+		this.test_id = test_id; 
+		this.status_id = 3;
+		this.comment = "";
+		this.defects = "";
 	}
 
-	public String getFailedDescription() {
-		return failedDescription;
+	public String getTitle() {
+		return title;
 	}
-	public void setFailedDescription(String failedDescription) {
-		this.failedDescription = failedDescription;
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public int getTest_id() {
+		return test_id;
+	}
+
+	public void setTest_id(int test_id) {
+		this.test_id = test_id;
+	}
+
+	public int getStatus_id() {
+		return status_id;
+	}
+
+	public void setStatus_id(int status_id) {
+		this.status_id = status_id;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public String getDefects() {
+		return defects;
+	}
+
+	public void setDefects(String defects) {
+		this.defects = defects;
 	}
 
 	@Override
 	public String toString() {
-		return "Report [testName=" + testName + ", status=" + status + ", failedDescription=" + failedDescription + "]";
+		return "Report [title=" + title + ", test_id=" + test_id + ", status_id=" + status_id + ", comment=" + comment
+				+ ", defects=" + defects + "]";
 	}
-	
 
 	@Override
 	public String[] getHeaders() {
-		String [] headers = {"Test Case","Status","Failed Description"};
+		String [] headers = {"Test ID", "Test Case","Status","Comment", "Defect"};
 		
 		return headers;
 	}
 
 	@Override
 	public Object[] getValues() {
-		Object [] values = {getTestName(), getStatus(), getFailedDescription()};
+		Object [] values = {getTest_id(), getTitle(), getStatus_id(), getComment(), getDefects()};
 		return values;
 	}
-	
-	
-	
-	
 }

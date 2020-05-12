@@ -41,9 +41,7 @@ public class MainPage {
 	WebElement btn_addInfant;
 
 	public MainPage(WebDriver driver) {
-
 		PageFactory.initElements(driver, this);
-
 	}
 
 	public boolean setRadioButton(String option) {

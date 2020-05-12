@@ -1,22 +1,20 @@
 package com.data;
 
 import java.util.HashMap;
-
 import com.vo.Report;
-import com.vo.Results;
 
 public class ReportSingleton {
 	
-	private static HashMap<String, Results> reportData = null;
+	private static HashMap<String, Report> reportData = null;
 	
 	private ReportSingleton() {
 		
 	}
 	
-	public static HashMap<String, Results> getSingleton() {
+	public static HashMap<String, Report> getSingleton() {
 		
 		if(reportData == null) {
-			reportData = new HashMap<String, Results>();
+			reportData = new HashMap<String, Report>();
 			return reportData;
 		}else {
 			return reportData;
