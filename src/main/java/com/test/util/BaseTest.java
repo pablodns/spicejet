@@ -1,26 +1,18 @@
-package com.util;
+package com.test.util;
 
 import java.util.HashMap;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 
 import com.data.Constants;
 import com.data.FlightDescriptionSingleton;
 import com.data.PropertyLoader;
-import com.listeners.IReportListener;
+import com.test.listeners.IReportListener;
 import com.vo.FlightDescription;
 
 

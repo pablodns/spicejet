@@ -1,4 +1,4 @@
-package com.listeners;
+package com.test.listeners;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,16 +13,16 @@ import com.data.ReportSingleton;
 import com.data.excel.ExcelWriter;
 import com.data.util.DataParser;
 import com.vo.Report;
+import com.vo.Results;
+import com.vo.TestRelationSingleton;
 
 public class IReportListener implements ITestListener{
 	
-	HashMap<String, Report> dataReport = ReportSingleton.getSingleton();
+	HashMap<String, Results> dataReport = ReportSingleton.getSingleton();
 	String className = null;
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		//className = getSimpleClassName(result);
-		//dataReport.put(className, new Report(className,"",""));
 		
 		ITestListener.super.onTestStart(result);
 	}
@@ -84,45 +84,38 @@ public class IReportListener implements ITestListener{
 	
 	public void setResult(ITestResult result) {
 		
-		String name = getSimpleClassName(result);
+		//String name = getSimpleClassName(result);
+		
+		String name = result.getInstanceName();
 		System.out.println("****************" + name);
-		dataReport.put(name, new Report(name, "", ""));
+		
+		
+		
+		dataReport.put(name, new Results(TestRelationSingleton.getRelation().get(name), "", "",""));
 		
 		String defect = ""; 
 		int run_status_id = result.getStatus();
 		
 		switch (run_status_id) {
 		case ITestResult.SUCCESS:
-			dataReport.get(name).setStatus("PASSED");
+			dataReport.get(name).setStatus_id("1");
 			
 			break;
 		case ITestResult.FAILURE:
-			dataReport.get(name).setStatus("FAILED");
-			dataReport.get(name).setFailedDescription(result.getThrowable().getMessage());
+			dataReport.get(name).setStatus_id("5");
+			dataReport.get(name).setDefects(result.getThrowable().getMessage());
 			
 			break;
 			
 		case ITestResult.SKIP:
-			dataReport.get(name).setStatus("SKIPED");
-			dataReport.get(name).setFailedDescription(result.getThrowable().getMessage());
+			dataReport.get(name).setStatus_id("2");
+			dataReport.get(name).setDefects(result.getThrowable().getMessage());
 			break;
 		default:
 			break;
 		}
 		
-		
-		
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	public String getSimpleClassName(ITestResult result) {
@@ -142,10 +135,6 @@ public class IReportListener implements ITestListener{
 		
 		return convert;
 	}
-	
-	
-	
-	
 	
 
 }

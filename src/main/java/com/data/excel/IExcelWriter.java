@@ -1,4 +1,4 @@
-package com.vo;
+package com.data.excel;
 
 
 public interface IExcelWriter {

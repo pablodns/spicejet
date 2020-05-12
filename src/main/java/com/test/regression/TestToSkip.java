@@ -1,15 +1,11 @@
-package com.regression;
+package com.test.regression;
 
-import java.util.HashMap;
 
 import org.testng.SkipException;
 import org.testng.annotations.Test;
+import com.test.util.BaseTest;
 
-import com.data.FlightDescriptionSingleton;
-import com.util.BaseTest;
-import com.vo.FlightDescription;
-
-public class Flight_Test_Singleton extends BaseTest{
+public class TestToSkip extends BaseTest{
 
 	@Test
 	public void h() {

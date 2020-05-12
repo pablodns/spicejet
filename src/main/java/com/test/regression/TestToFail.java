@@ -1,11 +1,11 @@
-package com.regression;
+package com.test.regression;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.util.BaseTest;
+import com.test.util.BaseTest;
 
-public class Flight_Second_Test extends BaseTest{
+public class TestToFail extends BaseTest{
 
 	
 	

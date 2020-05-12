@@ -1,17 +1,13 @@
-package com.regression;
+package com.test.regression;
 
 
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
-import org.testng.asserts.SoftAssert;
-
 import com.pages.MainPage;
-import com.util.BaseTest;
+import com.test.util.BaseTest;
 
-public class Test_02 extends BaseTest {
+public class Test_01 extends BaseTest {
 	
 	@Test
 	public void f() {

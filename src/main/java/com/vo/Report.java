@@ -1,10 +1,15 @@
 package com.vo;
 
+import com.data.excel.IExcelWriter;
+
 public class Report implements IExcelWriter {
 	
 	private String testName;
 	private String status;
 	private String failedDescription;
+	private String testId; 
+	private String statusId; 
+	private String comment; 
 	
 	public Report() {
 		super();
