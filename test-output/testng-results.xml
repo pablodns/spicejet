@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="33792" started-at="2020-05-12T16:54:33 CDT" finished-at="2020-05-12T16:55:07 CDT">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="33792" started-at="2020-05-12T16:54:33 CDT" finished-at="2020-05-12T16:55:07 CDT">
+      <class name="com.test.regression.Test_01">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.regression.Test_01@7651218e]" name="beforeMethod" is-config="true" duration-ms="2225" started-at="2020-05-12T16:54:33 CDT" finished-at="2020-05-12T16:54:35 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="f()[pri:0, instance:com.test.regression.Test_01@7651218e]" name="f" duration-ms="27327" started-at="2020-05-12T16:54:35 CDT" finished-at="2020-05-12T16:55:03 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.test.regression.Test_01@7651218e]" name="AfterMethod" is-config="true" duration-ms="4200" started-at="2020-05-12T16:55:03 CDT" finished-at="2020-05-12T16:55:07 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+      </class> <!-- com.test.regression.Test_01 -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
